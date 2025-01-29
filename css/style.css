@@ -1,0 +1,772 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+  font-family: Josefin Sans;
+  margin: 0;
+  padding: 0;
+}
+
+#menuMobile{
+  display: none;
+}
+
+#navBar, #navBar svg, #navBar nav, #textBoxHeader, #navBar nav span, #gridOptions .gridCell p, #tituloLogo, svg, .logos{
+  background-color: rgba(255, 255, 255, 0);
+}
+
+section, footer{
+  margin-top: 150px;
+}
+
+body{
+  min-width: 100%;
+}
+
+.barrinhaMouse{
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.barrinhaMouse::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35%;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.barrinhaMouse:hover::after{
+  width: 70%;
+}
+
+header{
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-position: center;
+  background-size: cover;
+
+  width: 100%;
+  height: 570px;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-inline: 100px;
+  box-sizing: border-box;
+}
+
+#navBar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#navBar nav span{
+  color: #fff;
+  margin-inline: 10px;
+}
+
+#botao-hamburguer{
+  display: none;
+}
+
+#textBoxHeader{
+  width: 600px;
+  height: 250px;
+
+  border: 2px solid #fff;
+
+  color: #fff;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  line-height: 68px;
+
+  font-size: 70px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section{
+  position: relative;
+}
+
+#imgBackgroundVr{
+  margin-left: 100px;
+}
+
+#imgBackgroundVr img{
+  width: 56%;
+}
+
+#vrDescription{
+  height: 55%;
+  width: 35%;
+
+  position: absolute;
+  right: 10%;
+  bottom: -5%;
+
+  padding-top: 7%;
+  padding-left: 7%;
+
+  background-color: #fff; 
+}
+
+#vrDescription h2{
+  font-size: 42px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 8%;
+}
+
+#vrDescription p{
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(0, 0%, 41%);
+}
+
+#creationsTitle{
+  padding-inline: 100px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#creationsTitle h3{
+  font-size: 42px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+#creationsTitle button{
+  border: 1px solid #000;
+  height: 35px;
+  width: 15%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#creationsTitle button:hover{
+  background-color: #000;
+  color: #fff;
+  transition: 300ms;
+}
+
+#creationsTitle button span{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: Alata;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#gridOptions{
+  margin-top: 100px;
+  padding-inline: 100px;
+ 
+  display: grid;
+  grid-template-columns: repeat(4, 256px);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 25px;
+  justify-content: center;
+}
+
+#gridOptions .gridCell{
+  height: 450px;
+  width: 256px;
+  padding: 25px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  cursor: pointer;
+}
+
+#deepEarth p, #nightArcade p, #soccerTeam p, #fromUp p, #pocketBorealis p, #theCuriosity p, #fishEye p{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 29px;
+  width: 72%;
+  font-weight: 300;
+}
+
+#theGrid p{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 29px;
+  width: 60%;
+  font-weight: 200;
+}
+
+#deepEarth{
+  background: linear-gradient( #ffffff00, #01010170), url(../images/desktop/image-deep-earth.jpg);
+}
+#nightArcade{
+  background: linear-gradient( #ffffff00, #01010170), url(../images/desktop/image-night-arcade.jpg);
+}
+#soccerTeam{
+  background: linear-gradient( #ffffff00, #01010170), url(../images/desktop/image-soccer-team.jpg);
+}
+#theGrid{
+  background: linear-gradient( #ffffff00, #01010170), url(../images/desktop/image-grid.jpg);
+}
+#fromUp{
+  background: linear-gradient( #ffffff00, #01010170), url(../images/desktop/image-from-above.jpg);
+}
+#pocketBorealis{
+  background: linear-gradient( #ffffff00, #01010170), url(../images/desktop/image-pocket-borealis.jpg);
+}
+#theCuriosity{
+  background: linear-gradient( #ffffff00, #01010170), url(../images/desktop/image-curiosity.jpg);
+}
+#fishEye{
+  background: linear-gradient( #ffffff00, #01010170), url(../images/desktop/image-fisheye.jpg);
+}
+#deepEarth:hover{
+  background: linear-gradient( #ffffff86, #ffffff9d), url(../images/desktop/image-deep-earth.jpg);
+}
+#nightArcade:hover{
+  background: linear-gradient( #ffffff91, #ffffffad), url(../images/desktop/image-night-arcade.jpg);
+}
+#soccerTeam:hover{
+  background: linear-gradient( #ffffff91, #ffffffad), url(../images/desktop/image-soccer-team.jpg);
+}
+#theGrid:hover{
+  background: linear-gradient( #ffffff91, #ffffffad), url(../images/desktop/image-grid.jpg);
+}
+#fromUp:hover{
+  background: linear-gradient( #ffffff91, #ffffffad), url(../images/desktop/image-from-above.jpg);
+}
+#pocketBorealis:hover{
+  background: linear-gradient( #ffffff91, #ffffffad), url(../images/desktop/image-pocket-borealis.jpg);
+}
+#theCuriosity:hover{
+  background: linear-gradient( #ffffff91, #ffffffad), url(../images/desktop/image-curiosity.jpg);
+}
+#fishEye:hover{
+  background: linear-gradient( #ffffff91, #ffffffad), url(../images/desktop/image-fisheye.jpg);
+}
+
+ #deepEarth:hover p, #nightArcade:hover p, #soccerTeam:hover p, #theGrid:hover p, #fromUp:hover p, #pocketBorealis:hover p, #theCuriosity:hover p, #fishEye:hover p{
+  color: #000;
+  font-weight: 300;
+}
+
+footer{
+  background-color: #000;
+  color: #fff;
+
+  padding-top: 40px;
+  padding-inline: 80px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#firstLine{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+#secondLine{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footerNavBar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+#loopstudiosCredits{
+  color: hsl(0, 0%, 55%);
+}
+
+@media(max-width:1100px){
+  #gridOptions{   
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: auto;
+    grid-gap: 15px;
+  }
+
+  #gridOptions .gridCell{
+    height: 400px;
+    width: auto;
+    padding: 22px;
+  }
+
+  #vrDescription h2{
+    font-size: 28px;
+  }
+  
+  #vrDescription p{
+    line-height: 17px;
+    font-size: 12px;
+  } 
+}
+
+@media(max-width:850px){
+  #textBoxHeader{
+    width: 400px;
+    height: 166px;
+
+    padding: 15px;
+  
+    line-height: 43px;
+    font-size: 45px;
+  }
+
+  .svgLogo{
+    height: 16px;
+    width: 81px;   
+  }
+
+  #navBar nav span{
+    font-size: 13px;
+    margin-inline: 5px;
+  }
+
+  #creationsTitle h3{
+    font-size: 33px;
+  }
+
+  #creationsTitle button{
+    height: 20px;
+  }
+
+  #creationsTitle button span{
+    letter-spacing: 2px;
+    font-size: 10px;
+  }
+
+  #creationsTitle button:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 300ms;
+  }
+
+  #gridOptions{   
+    grid-template-columns: repeat(1, 654px);
+    grid-template-rows: repeat(8, 240px);
+  }
+
+  #gridOptions .gridCell{
+    height: 240px;
+    width: 654px;
+    padding: 25px;
+  }
+
+  #deepEarth p, #nightArcade p, #soccerTeam p, #fromUp p, #pocketBorealis p, #theCuriosity p, #fishEye p{
+    font-size: 27px;
+    width: 25%;
+  }
+  
+  #theGrid p{
+    font-size: 27px;
+    width: 20%;
+  }
+
+  #deepEarth{
+    background: linear-gradient( #ffffff00, #01010170), url(../images/mobile/image-deep-earth.jpg);
+  }
+  #nightArcade{
+    background: linear-gradient( #ffffff00, #01010170), url(../images/mobile/image-night-arcade.jpg);
+  }
+  #soccerTeam{
+    background: linear-gradient( #ffffff00, #01010170), url(../images/mobile/image-soccer-team.jpg);
+  }
+  #theGrid{
+    background: linear-gradient( #ffffff00, #01010170), url(../images/mobile/image-grid.jpg);
+  }
+  #fromUp{
+    background: linear-gradient( #ffffff00, #01010170), url(../images/mobile/image-from-above.jpg);
+  }
+  #pocketBorealis{
+    background: linear-gradient( #ffffff00, #01010170), url(../images/mobile/image-pocket-borealis.jpg);
+  }
+  #theCuriosity{
+    background: linear-gradient( #ffffff00, #01010170), url(../images/mobile/image-curiosity.jpg);
+  }
+  #fishEye{
+    background: linear-gradient( #ffffff00, #01010170), url(../images/mobile/image-fisheye.jpg);
+  }
+  #deepEarth:hover{
+    background: linear-gradient( #ffffff86, #ffffff9d), url(../images/mobile/image-deep-earth.jpg);
+  }
+  #nightArcade:hover{
+    background: linear-gradient( #ffffff91, #ffffffad), url(../images/mobile/image-night-arcade.jpg);
+  }
+  #soccerTeam:hover{
+    background: linear-gradient( #ffffff91, #ffffffad), url(../images/mobile/image-soccer-team.jpg);
+  }
+  #theGrid:hover{
+    background: linear-gradient( #ffffff91, #ffffffad), url(../images/mobile/image-grid.jpg);
+  }
+  #fromUp:hover{
+    background: linear-gradient( #ffffff91, #ffffffad), url(../images/mobile/image-from-above.jpg);
+  }
+  #pocketBorealis:hover{
+    background: linear-gradient( #ffffff91, #ffffffad), url(../images/mobile/image-pocket-borealis.jpg);
+  }
+  #theCuriosity:hover{
+    background: linear-gradient( #ffffff91, #ffffffad), url(../images/mobile/image-curiosity.jpg);
+  }
+  #fishEye:hover{
+    background: linear-gradient( #ffffff91, #ffffffad), url(../images/mobile/image-fisheye.jpg);
+  }
+
+  #deepEarth, #nightArcade, #soccerTeam, #theGrid, #fromUp, #pocketBorealis, #theCuriosity, #fishEye, #deepEarth:hover, #nightArcade:hover, #soccerTeam:hover, #theGrid:hover, #fromUp:hover, #pocketBorealis:hover, #theCuriosity:hover, #fishEye:hover{
+    background-size: contain;
+  }
+
+  #footerNavBar{
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  #loopstudiosCredits{
+    font-size: 13px;
+  }
+}
+
+@media(max-width:655px){
+  header{
+    height: 385px;
+
+    padding-top: 35px;
+    padding-bottom: 70px;
+    padding-inline: 70px;
+  }
+
+  .svgLogo {
+    height: 14.5px;
+    width: 73px;
+  }
+
+  section, footer{
+    margin-top: 70px;
+  }
+
+  #navBar nav span {
+    margin-inline: 3px;
+  }
+
+  #vrDescription h2{
+    font-size: 20px;
+  }
+  
+  #vrDescription p{
+    line-height: 12px;
+    font-size: 10px;
+  } 
+
+  #imgBackgroundVr{
+    margin-left: 70px;
+  }
+
+  #creationsTitle{
+    padding-inline: 70px
+  }
+
+  #creationsTitle h3{
+    font-size: 25px;
+  }
+
+  #creationsTitle button{
+    width: 25%;
+    height: 25px;
+  }
+
+  #gridOptions{
+    margin-top: 70px;
+    padding-inline: 70px;
+    grid-template-columns: repeat(1, 392px);
+    grid-template-rows: repeat(8, 144px);
+  }
+
+  #gridOptions .gridCell{
+    height: 144px;
+    width: 392px;
+    padding: 20px;
+  }
+
+  #deepEarth p, #nightArcade p, #soccerTeam p, #fromUp p, #pocketBorealis p, #theCuriosity p, #fishEye p{
+    font-size: 17px;
+  }
+  
+  #theGrid p{
+    font-size: 17px;
+  }
+
+  #firstLine{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #secondLine{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #footerNavBar{
+    gap: 5px;
+    font-size: 12px;
+  }
+
+  #loopstudiosCredits{
+    font-size: 12px;
+  }
+
+  footer{
+    padding-top: 30px;
+    padding-inline: 70px;
+    padding-bottom: 40px
+  }
+}
+
+@media(max-width:510px){
+  .svgLogo {
+    height: 11.5px;
+    width: 58.4px;
+  }
+
+  #navBar nav span {
+    margin-inline: 1px;
+    font-size: 9px;
+  }
+
+  header{
+    height: 300px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    padding-inline: 50px;
+  }
+
+  #textBoxHeader {
+    width: 200px;
+    height: 90px;
+
+    padding: 10px;
+
+    line-height: 23px;
+    font-size: 24px;
+  }
+
+  #vrDescription h2 {
+    font-size: 12px;
+  }
+
+  #vrDescription p {
+    line-height: 9px;
+    font-size: 7px;
+  }
+
+  #imgBackgroundVr{
+    margin-left: 50px;
+  }
+
+  #creationsTitle{
+    padding-inline: 50px
+  }
+
+  #creationsTitle h3 {
+    font-size: 20px;
+  }
+
+  footer{
+    padding-inline: 50px;
+  }
+  
+}
+
+@media(max-width:400px){
+  #menuMobile{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 50px;
+
+    width: 200px;
+    height: 350px;
+    
+    background-color: #000;
+    
+    position: absolute;
+    top: 0;
+    right: 0; 
+
+    padding-top: 20px;
+    padding-inline: 10px;
+    box-sizing: border-box;
+  }
+
+  #menuMobile #navBarHamburguer{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #menuMobile #navBarHamburguer span{
+    font-size: 15px;
+    color: #fff;
+    font-family: Josefin Sans;
+    font-weight: 200;
+  }
+  
+  #botaoX{
+    border: 0;
+    border-radius: 50%;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+  }
+
+  #lineHamburguer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header{
+    height: 400px;
+    justify-content: flex-start;
+    gap: 110px;
+    position: relative;
+  }
+
+  #navBar nav{
+    display: none;
+  }
+
+  #botao-hamburguer{
+    display: block;
+    background-color: #00000000;
+    border: 0;
+    color: gray;
+  }
+
+  section{
+    padding-inline: 50px;
+  }
+
+  #imgBackgroundVr{
+    margin: 0;
+    width: 100%;
+  }
+
+  #imgBackgroundVr img{
+    width: 100%;
+  }
+
+  #vrDescription h2{
+    margin-top: 35px;
+    text-align: center;
+    font-size: 27px;
+  }
+
+  #vrDescription p{
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  #vrDescription{
+    position: static;
+    width: 100%;
+    padding: 0;
+  }
+
+  #creationsTitle{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+  }
+
+  #creationsTitle h3 {
+    font-size: 17px;
+  }
+
+  #creationsTitle button{
+    width: 40%;
+  }
+
+  #gridOptions{
+    margin-top: 50px;
+    padding-inline: 30px;
+    grid-template-columns: repeat(1, 260px);
+    grid-template-rows: repeat(8, 95.5px);
+  }
+
+  #gridOptions .gridCell{
+    height: 95.5px;
+    width: 260px;
+    padding: 10px;
+  }
+
+  #deepEarth p, #nightArcade p, #soccerTeam p, #fromUp p, #pocketBorealis p, #theCuriosity p, #fishEye p{
+    font-size: 12px;
+    width: 27%;
+  }
+  
+  #theGrid p{
+    font-size: 12px;
+    width: 20%;
+  }
+
+  #footerNavBar{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer{
+    gap: 10px;
+  }
+}
